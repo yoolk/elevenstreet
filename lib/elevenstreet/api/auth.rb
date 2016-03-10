@@ -1,7 +1,7 @@
 module Elevenstreet
   module API
     module Auth
-      def is_authourize?
+      def is_authorized?
         !!categories
       end
     end
