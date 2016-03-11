@@ -4,6 +4,7 @@ require 'active_support/core_ext/hash'
 require 'elevenstreet/api/auth'
 require 'elevenstreet/api/product'
 require 'elevenstreet/api/category'
+require 'elevenstreet/api/order'
 
 module Elevenstreet
   class Client
@@ -11,6 +12,7 @@ module Elevenstreet
     include Elevenstreet::API::Auth
     include Elevenstreet::API::Product
     include Elevenstreet::API::Category
+    include Elevenstreet::API::Order
 
     base_uri 'api.11street.my/rest'
 
