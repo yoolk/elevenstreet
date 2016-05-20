@@ -87,7 +87,7 @@ client.sub_categories(parent_category_id)
 ### Elevenstreet::Client#order
 Returns order detail
 ```ruby
-client.order(order_nu)
+client.order(order_number)
 ```
 
 ### Elevenstreet::Client#completed_payments
@@ -104,7 +104,7 @@ To install this gem onto your local machine, run `bundle exec rake install`. To 
 
 ## Contributing
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/[USERNAME]/elevenstreet. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](contributor-covenant.org) code of conduct.
+Bug reports and pull requests are welcome on GitHub at https://github.com/yoolk/elevenstreet. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](contributor-covenant.org) code of conduct.
 
 
 ## License
