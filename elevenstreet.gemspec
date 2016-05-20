@@ -11,7 +11,7 @@ Gem::Specification.new do |spec|
 
   spec.summary       = %q{A ruby wrapper for the 11Street API.}
   spec.description   = %q{A ruby wrapper for the 11Street API.}
-  spec.homepage      = "https://github.com/rothanachoun/elevenstreet"
+  spec.homepage      = "https://github.com/yoolk/elevenstreet"
   spec.license       = "MIT"
 
   # Prevent pushing this gem to RubyGems.org by setting 'allowed_push_host', or

@@ -1,8 +1,6 @@
 # Elevenstreet
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/elevenstreet`. To experiment with that code, run `bin/console` for an interactive prompt.
-
-TODO: Delete this and the text above, and describe your gem
+A Ruby API for http://www.11street.my
 
 ## Installation
 
@@ -20,9 +18,83 @@ Or install it yourself as:
 
     $ gem install elevenstreet
 
-## Usage
+## Elevenstreet::Client
 
-TODO: Write usage instructions here
+The client is the base for all communication with the API.
+
+```ruby
+client = Elevenstreet::Client.new(api_key)
+```
+
+## Elevenstreet::Client methods
+
+### Elevenstreet::Client#upsert_product
+Create or update product
+```ruby
+client.upsert_product({ 'prdNm'=> 'Product Name', 'dispCtgrNo' => 2, ... })
+```
+
+### Elevenstreet::Client#update_product_options
+Update product options
+
+```ruby
+client.update_product_options(product_number, { 'optSelCnt' => 1, 'colTitle' => 'Size', ... })
+```
+
+### Elevenstreet::Client#product
+Returns product detail
+```ruby
+client.product(product_number)
+```
+
+### Elevenstreet::Client#hide_product
+Hide the product
+```ruby
+client.hide_product(product_number)
+```
+
+### Elevenstreet::Client#unhide_product
+Re active the hidden product
+```ruby
+client.unhide_product(product_number)
+```
+
+### Elevenstreet::Client#update_product_price
+Edit item price
+
+```ruby
+client.update_product_price(product_number, price)
+```
+
+### Elevenstreet::Client#product_stocks
+Returns product stocks
+```ruby
+client.product_stocks(product_number)
+```
+
+### Elevenstreet::Client#categories
+Returns full categories
+```ruby
+client.categories
+```
+
+### Elevenstreet::Client#sub_categories
+Returns sub categories of a parent category
+```ruby
+client.sub_categories(parent_category_id)
+```
+
+### Elevenstreet::Client#order
+Returns order detail
+```ruby
+client.order(order_nu)
+```
+
+### Elevenstreet::Client#completed_payments
+Returns all completed payment orders
+```ruby
+client.completed_payments(start_time, end_time)
+```
 
 ## Development
 
@@ -38,4 +110,3 @@ Bug reports and pull requests are welcome on GitHub at https://github.com/[USERN
 ## License
 
 The gem is available as open source under the terms of the [MIT License](http://opensource.org/licenses/MIT).
-
