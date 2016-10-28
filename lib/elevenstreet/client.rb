@@ -5,6 +5,7 @@ require 'elevenstreet/api/auth'
 require 'elevenstreet/api/product'
 require 'elevenstreet/api/category'
 require 'elevenstreet/api/order'
+require 'elevenstreet/api/response'
 
 module Elevenstreet
   class Client
